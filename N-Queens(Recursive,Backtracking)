@@ -1,0 +1,97 @@
+def isSafe(m, n, row, col, x, ans, all_ans, queen_count, i):
+    
+    cant_place = False
+            
+    # Check upper left diagonal
+    dx = x - 1
+    dy = i - 1
+    while dx >= 0 and dy >= 0 and not cant_place:
+        if m[dx][dy] == 1:
+            cant_place = True
+        dx = dx - 1
+        dy = dy - 1
+
+    # Check lower right diagonal
+    dx = x + 1
+    dy = i + 1
+    while dx < n and dy < n and not cant_place:
+        if m[dx][dy] == 1:
+            cant_place = True
+        dx = dx + 1
+        dy = dy + 1
+
+    # Check upper right diagonal
+    dx = x - 1
+    dy = i + 1
+    while dx >= 0 and dy < n and not cant_place:
+        if m[dx][dy] == 1:
+            cant_place = True
+        dx = dx - 1
+        dy = dy + 1
+
+    # Check lower left diagonal
+    dx = x + 1
+    dy = i - 1
+    while dx < n and dy >= 0 and not cant_place:
+        if m[dx][dy] == 1:
+            cant_place = True
+        dx = dx + 1
+        dy = dy - 1
+                    
+    return cant_place
+
+
+def placeQueens(m, n, row, col, x, ans, all_ans, queen_count):
+        
+    for i in range(n):
+                
+        # Check if this row and column in empty        
+        if row[x] == 0 and col[i] == 0:
+            # check diagonal
+            
+            cant_place = isSafe(m, n, row, col, x, ans, all_ans, queen_count, i)
+            
+            if not cant_place:
+                m[x][i] = 1
+                row[x] = 1
+                col[i] = 1
+                
+                temp = ''
+                for j in range(n):
+                    if i == j:
+                        temp = temp + 'Q'
+                    else:
+                        temp = temp + '.'
+                ans.append(temp)
+                queen_count += 1
+                if queen_count == n:
+                    temp = []
+                    temp = ans.copy()
+                    all_ans.append(temp)
+                    
+                    m[x][i] = 0
+                    row[x] = 0
+                    col[i] = 0
+                    ans.pop()
+                    queen_count -= 1
+                    return True
+                else:
+                    placeQueens(m, n, row, col, x + 1, ans, all_ans, queen_count)
+                
+                m[x][i] = 0
+                row[x] = 0
+                col[i] = 0
+                ans.pop()
+                queen_count -= 1
+                
+    return True
+
+
+class Solution:
+    def solveNQueens(self, n: int) -> List[List[str]]:
+        row = [0 for i in range(n)]
+        col = [0  for i in range(n)]
+        m = [[0 for i in range(n)] for i in range(n)]
+        all_ans = []
+        placeQueens(m, n, row, col, 0, [], all_ans, 0)
+        return all_ans
