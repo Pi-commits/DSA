@@ -1,0 +1,40 @@
+class Solution:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        
+        if not grid:
+            return 0
+        
+        self.rows = len(grid)
+        self.cols = len(grid[0])
+        
+        max_area = 0
+        
+        self.visited = [[False for i in range(self.cols)] for j in range(self.rows) ]
+        
+        for i in range(self.rows):
+            for j in range(self.cols):
+                
+                if grid[i][j] == 1 and not self.visited[i][j]:
+                    
+                    count = self.dfs(i, j, grid, 0)
+                    if count > max_area:
+                        max_area = count
+                        
+        return max_area
+    
+    
+    def dfs(self, row, col, grid, count):
+        
+        if grid[row][col] == 1 and not self.visited[row][col]:
+            self.visited[row][col] = True
+            count += 1
+            
+            cal_arr = [[1, 0], [0, 1], [-1, 0], [0, -1]]
+            
+            for r_cal, c_cal in cal_arr:
+                r = row + r_cal
+                c = col + c_cal
+                if r >= 0 and r < self.rows and c >= 0 and c < self.cols and grid[r][c] == 1 and not self.visited[r][c]:
+                    count = self.dfs(r, c, grid, count)
+                    
+        return count
