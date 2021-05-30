@@ -1,0 +1,61 @@
+class Solution:
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        
+        if not grid:
+            return 0
+        self.rows = len(grid)
+        self.cols = len(grid[0])
+        # self.min_cost_matrix = [[0 for i in range(self.cols)]for j in range(self.rows)]
+        self.min_cost_matrix = []
+        for j in range(self.rows):
+            self.min_cost_matrix.append([0]*self.cols)
+        
+        self.min_cost_path = {}
+		
+        visited = {}
+		
+        # All 4 direction will work with this calculation matrix        
+		# cal_matrix = [[0, -1], [0, 1], [-1, 0], [1, 0]]
+        
+        # For down and right direction only        
+        # cal_matrix = [[0, 1], [1, 0]]
+        cal_matrix = [[1, 0], [0, 1]]
+        self.findAllPaths(grid, 0, 0, visited, 0, cal_matrix)
+		
+        return self.min_cost_matrix[self.rows-1][self.cols-1] if self.min_cost_path else 0
+		
+
+    def findAllPaths(self, grid, x, y, visited, cost, cal_matrix):
+        
+
+        cost += grid[x][y]
+
+        if x == self.rows-1 and y == self.cols-1:
+            if self.min_cost_matrix[x][y] == 0 or cost < self.min_cost_matrix[x][y]:
+                self.min_cost_matrix[x][y] = cost
+                self.min_cost_path = cost
+                return
+            
+            else:
+                return
+            
+        else:
+            
+            if self.min_cost_matrix[x][y] == 0 or cost < self.min_cost_matrix[x][y]:
+                self.min_cost_matrix[x][y] = cost
+                
+                for row, col in cal_matrix:
+                    
+                    r = x + row
+                    c = y + col
+                    
+                    if r < self.rows and r >= 0 and c < self.cols and c >= 0 and str(r) + str(c) not in visited:
+                        # print('    visited - ', visited)
+                        # print('    visiting point ; ', r, ' ', c)
+                        
+                        visited[str(r) + str(c)] = 1
+                        self.findAllPaths(grid, r, c, visited, cost, cal_matrix)
+                        visited.pop(str(r) + str(c), None)
+                        
+        return
+        
