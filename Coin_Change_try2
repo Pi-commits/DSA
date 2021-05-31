@@ -1,0 +1,23 @@
+class Solution:
+    
+    # Implemented Rod cutting approach     
+
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        
+        if not amount:
+            return 0
+        
+        rows_len = len(coins)
+        coins.sort()
+        
+        # Initialize matrix of size amount, first element = 0, all other amount + 1 ( taking max possible + 1 )
+        min_coins_matrix = [ amount+1 for i in range(amount + 1) ]
+        min_coins_matrix[0] = 0
+        
+        for i in range(amount + 1):
+            for coin in coins:
+                if i >= coin:
+                    min_coins_matrix[i] = min( 1 + min_coins_matrix[i-coin], min_coins_matrix[i] )
+        
+        return -1 if min_coins_matrix[i] == amount + 1 else min_coins_matrix[i]
+      
