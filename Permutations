@@ -1,0 +1,25 @@
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        
+        if not nums:
+            return []
+        
+        
+        self.ans = []
+        self.allPermutations(nums, [])
+        return self.ans
+    
+    
+    def allPermutations(self, nums, path):
+        
+        if not nums:
+            self.ans.append(path)
+            return True
+        
+        for i in range(len(nums)):
+            path.append(nums[i])
+            temp = path.copy()
+            self.allPermutations(nums[:i] + nums[i+1:], temp)
+            path.pop()
+            
+        return True
