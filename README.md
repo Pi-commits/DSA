@@ -1,4 +1,10 @@
 # DSAPython
 
 LeetCode Top Interview Questions List
-1. [Reverse String](https://leetcode.com/problems/reverse-string/)
+
+| **Count**        | **Question**           | **Github Link**  | **Difficulty**  |
+| ------------- |:-------------:| -----:|
+| 1 | [Reverse String](https://leetcode.com/problems/reverse-string/) | | |
+| 2 | | | |
+| 3 | | | |
+
