@@ -1,0 +1,25 @@
+class Solution:
+    # @param A : integer
+    # @return a list of list of integers
+    def prettyPrint(self, A):
+
+        # nXn : n = 2*A - 1
+        # for n = 4
+        # loop from 0 to 3
+        # for i = 0, 0 to 2*A - 1 - i (0 to 7)
+        # for i = 1, 1 to 2*A - 1 - i (1 to 6) for row 
+        col_l, row_l = 2*A - 1, 2*A - 1
+        m = [ [0] * col_l for _ in range(2*A-1) ]
+
+        count = 0
+        for i in range(A):
+            mi, ma = count, 2*A - 1 - count
+            for j in range(mi, ma, +1):
+                if j == mi or j == ma-1:
+                    for c in range(mi, ma, +1):
+                        m[j][c] = A-count 
+                else:
+                    m[j][mi] = A-count
+                    m[j][ma-1] = A-count
+            count += 1
+        return m
