@@ -1,0 +1,97 @@
+class Solution:
+    def largestIsland(self, grid):
+        m, n = len(grid), len(grid[0])
+        dir_list = [[1,0],[-1,0],[0,-1],[0,1]]
+        islands, count, ans = {}, 2, 0
+        
+        def dfs(t, i, j):
+            if not 0 <= i < m or not 0 <= j < n or grid[i][j] != 1: return
+            islands[t] += 1
+            grid[i][j] = t
+            for x, y in dir_list: dfs(t, x+i, y+j)
+                
+        for x, y in product(range(m), range(n)):
+            if grid[x][y] == 1:
+                islands[count] = 0
+                dfs(count, x, y)
+                count += 1
+                
+        for x, y in product(range(m), range(n)):
+            if grid[x][y] == 0:
+                neibs = set()
+                for dx, dy in dir_list:
+                    if 0 <= x + dx < m and 0 <= y + dy < n and grid[x+dx][y+dy] != 0:
+                        neibs.add(grid[x+dx][y+dy])
+                ans = max(ans, sum(islands[i] for i in neibs) + 1)
+            
+        return ans if ans != 0 else m*n
+
+
+
+
+# Original Solution - Time Limit Exceeded but working 
+
+
+# class Solution:
+#     import copy
+#     def largestIsland(self, grid: List[List[int]]) -> int:
+                
+#         if not grid:
+#             return 0
+        
+#         row_l = len(grid)
+#         col_l = len(grid[0])
+        
+#         self.dir = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+        
+#         max_island_size = 0
+        
+#         for i in range(row_l):
+#             for j in range(col_l):
+                
+#                 if grid[i][j] == 0:
+#                     total_size = 0
+#                     # temp_visited = [ [ 0 ] * row_l for i in range(col_l)]
+#                     temp_visited = {}
+#                     for d in self.dir:
+                        
+#                         r = d[0] + i
+#                         c = d[1] + j
+                        
+#                         if r >= 0 and c >= 0 and r < row_l and c < col_l:
+                            
+#                             temp_size = self.returnIslandSize(r, c, grid, temp_visited, 0, row_l, col_l)
+#                             total_size += temp_size
+                                
+#                     if total_size + 1 > max_island_size:
+#                         max_island_size = total_size + 1 
+                
+#         return max_island_size if max_island_size else row_l*col_l
+
+#     def returnIslandSize(self, x, y, grid, visited, count, row_l, col_l):
+#             pos = str(x) + "-" + str(y)
+#             if pos in visited:
+#                 return count
+            
+#             if grid[x][y]:
+                
+#                 visited[pos] = 1
+#                 count += 1
+                
+#                 for d in self.dir:
+                        
+#                     r = d[0] + x
+#                     c = d[1] + y
+#                     temp_pos =  str(r) + "-" + str(c)
+#                     if r >= 0 and c >= 0 and r < row_l and c < col_l and temp_pos not in visited:
+#                         count = self.returnIslandSize(r, c, grid, visited, count, row_l, col_l)
+                        
+#             return count
+                        
+                
+                
+            
+            
+            
+        
+        
