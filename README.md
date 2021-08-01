@@ -22,3 +22,12 @@ LeetCode Monthly ( August ) Questions List
 | 2 | []() | [Link]() | `Easy` |
 | 3 | []() | [Link]() | `Easy` |
 
+
+InterviewBit Questions List
+
+| **Count**        | **Question**           | **Github Link**  | **Difficulty**  |
+|:-------------:|:-------------:|:-----:|:-----:|
+| 1 | [PrettyPrint](https://www.interviewbit.com/problems/prettyprint/) | [Link](https://github.com/Pi-commits/DSAPython/tree/main/InterviewBit) | `Easy` |
+| 2 | []() | [Link]() | `Easy` |
+| 3 | []() | [Link]() | `Easy` |
+
