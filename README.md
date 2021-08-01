@@ -11,3 +11,14 @@ LeetCode Top Interview Questions List
 | 5 | []() | [Link]() | `Easy` |
 | 6 | []() | [Link]() | `Easy` |
 
+
+
+
+LeetCode Monthly ( August ) Questions List
+
+| **Count**        | **Question**           | **Github Link**  | **Difficulty**  |
+|:-------------:|:-------------:|:-----:|:-----:|
+| 1 | [Making A Large Island](https://leetcode.com/problems/making-a-large-island/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Making-A-Large-Island) | `Hard` |
+| 2 | []() | [Link]() | `Easy` |
+| 3 | []() | [Link]() | `Easy` |
+
