@@ -20,7 +20,11 @@ LeetCode Monthly ( August ) Questions List
 |:-------------:|:-------------:|:-----:|:-----:|
 | 1 | [Making A Large Island](https://leetcode.com/problems/making-a-large-island/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Making-A-Large-Island) | `Hard` |
 | 2 | [Two Sets](https://leetcode.com/problems/two-sum/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Two-Sum) | `Easy` |
-| 3 | []() | [Link]() | `Easy` |
+| 3 | [Sybsets 2](https://leetcode.com/problems/subsets-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Subsets-2) | `Medium` |
+| 4 | [Path Sum 2](https://leetcode.com/problems/path-sum-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Path-Sum-II) | `Medium` |
+| 5 | []() | [Link]() | `Easy` |
+| 6 | []() | [Link]() | `Easy` |
+| 7 | []() | [Link]() | `Easy` |
 
 
 InterviewBit Questions List
