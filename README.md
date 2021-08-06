@@ -18,13 +18,14 @@ LeetCode Monthly ( August ) Questions List
 
 | **Count**        | **Question**           | **Github Link**  | **Difficulty**  |
 |:-------------:|:-------------:|:-----:|:-----:|
-| 1 | [Making A Large Island](https://leetcode.com/problems/making-a-large-island/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Making-A-Large-Island) | `Hard` |
-| 2 | [Two Sets](https://leetcode.com/problems/two-sum/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Two-Sum) | `Easy` |
-| 3 | [Sybsets 2](https://leetcode.com/problems/subsets-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Subsets-2) | `Medium` |
-| 4 | [Path Sum 2](https://leetcode.com/problems/path-sum-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Path-Sum-II) | `Medium` |
-| 5 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/N_ary-Tree-Level-Order-Traversal) | `Medium` |
-| 6 | []() | [Link]() | `Easy` |
-| 7 | []() | [Link]() | `Easy` |
+| Day 1 | [Making A Large Island](https://leetcode.com/problems/making-a-large-island/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Making-A-Large-Island) | `Hard` |
+| Day 2 | [Two Sets](https://leetcode.com/problems/two-sum/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Two-Sum) | `Easy` |
+| Day 3 | [Sybsets 2](https://leetcode.com/problems/subsets-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Subsets-2) | `Medium` |
+| Day 4 | [Path Sum 2](https://leetcode.com/problems/path-sum-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Path-Sum-II) | `Medium` |
+| Day 5 | [Stone Game](https://leetcode.com/problems/stone-game/) | [Bekar Question but submitted]() | `Medium` |
+| Day 6 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/N_ary-Tree-Level-Order-Traversal) | `Medium` |
+| Day 7 | []() | [Link]() | `Easy` |
+| Day 8 | []() | [Link]() | `Easy` |
 
 
 InterviewBit Questions List
