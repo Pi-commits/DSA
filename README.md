@@ -22,7 +22,7 @@ LeetCode Monthly ( August ) Questions List
 | 2 | [Two Sets](https://leetcode.com/problems/two-sum/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Two-Sum) | `Easy` |
 | 3 | [Sybsets 2](https://leetcode.com/problems/subsets-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Subsets-2) | `Medium` |
 | 4 | [Path Sum 2](https://leetcode.com/problems/path-sum-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Path-Sum-II) | `Medium` |
-| 5 | []() | [Link]() | `Easy` |
+| 5 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/N_ary-Tree-Level-Order-Traversal) | `Medium` |
 | 6 | []() | [Link]() | `Easy` |
 | 7 | []() | [Link]() | `Easy` |
 
