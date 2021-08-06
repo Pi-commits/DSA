@@ -1,0 +1,24 @@
+class Solution:
+    def levelOrder(self, root: 'Node') -> List[List[int]]:
+                
+        ans = []
+        q = []
+        
+        if not root:
+            return q
+                
+        q.append(root)
+        while q:
+            
+            print('ans : ', ans)
+            sub_ans = []
+            l = len(q)
+            temp2 = []
+            for i in range(l):
+                temp = q.pop(0)
+                sub_ans.append(temp.val)
+                q.extend(temp.children)
+            
+            ans.append(sub_ans)
+                        
+        return ans
