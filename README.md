@@ -24,8 +24,14 @@ LeetCode Monthly ( August ) Questions List
 | Day 4 | [Path Sum 2](https://leetcode.com/problems/path-sum-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Path-Sum-II) | `Medium` |
 | Day 5 | [Stone Game](https://leetcode.com/problems/stone-game/) | [Bekar Question but submitted]() | `Medium` |
 | Day 6 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/N_ary-Tree-Level-Order-Traversal) | `Medium` |
-| Day 7 | []() | [Link]() | `Easy` |
+| Day 7 | [Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/) | [Link](https://github.com/Pi-commits/DSAPython/blob/main/LeetCode/Palindrome-Partitioning-II) | `Hard` |
 | Day 8 | []() | [Link]() | `Easy` |
+| Day 9 | []() | [Link]() | `Easy` |
+| Day 10 | []() | [Link]() | `Easy` |
+| Day 11 | []() | [Link]() | `Easy` |
+| Day 12 | []() | [Link]() | `Easy` |
+| Day 13 | []() | [Link]() | `Easy` |
+| Day 14 | []() | [Link]() | `Easy` |
 
 
 InterviewBit Questions List
