@@ -1,0 +1,67 @@
+class Solution:
+    def minCut(self, s: str) -> int:
+        
+        lenS = len(s)
+        
+        if lenS == 1:
+            return 0
+        
+        self.dpTable = [ [False for j in range(lenS)] for i in range(lenS) ]
+        self.dpIteration = {}
+        for i in range(lenS):
+            r = 0
+            c = i
+            
+            secondCol = False
+            if c == 1:
+                secondCol = True
+            
+            while r < lenS and c < lenS:
+                
+                subString = s[r:c+1]
+                
+                if r == c:
+                    self.dpTable[r][c] = True
+                    
+                elif secondCol:
+                    if subString[0] == subString[1]:
+                        self.dpTable[r][c] = True
+                else:
+                    if subString[0] == subString[-1] and self.dpTable[r+1][c-1]:
+                        self.dpTable[r][c] = True
+                        
+                r += 1
+                c += 1
+                        
+        minCuts = self.findMinCuts(s, lenS, lenS)
+        
+        return minCuts
+    
+    def findMinCuts(self, s, lenS, lenSubString):
+        
+        dp_check = str(s) + '-' + str(lenSubString)
+        if dp_check in self.dpIteration.keys():
+            return self.dpIteration[dp_check]
+        
+        if lenS == 1:
+            return 0
+        
+        col = lenSubString -1
+        
+        # Find all palindrome in this string
+        
+        minCutValue = 2000
+        
+        for i in range(lenSubString):
+            if self.dpTable[i][col]:
+                
+                if i == 0:
+                    # print(i, col)
+                    return 0
+                
+                temp = self.findMinCuts(s[:i], lenS, i)
+                if temp < minCutValue:
+                    minCutValue = temp
+                    
+        self.dpIteration[dp_check] = 1 + minCutValue
+        return 1 + minCutValue
